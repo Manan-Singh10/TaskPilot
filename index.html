@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskPilot</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <script type="module" defer src="scripts/script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <section class="left-header">
+        <div class="hamburger">&#9776;</div>
+        <p class="app-name" id="logo">TaskPilot</p>
+      </section>
+      <input class="search" type="text" placeholder="Search" />
+    </header>
+
+    <div class="menu hidden">
+      <div class="navigation-icon">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="navigation-icon" href="tracking.html">
+        <a href="tracking.html">Tracking</a>
+      </div>
+      <label class="navigation-icon toggle" for="myToggle">
+        <input type="checkbox" class="toggle__input" id="myToggle" />
+        <div class="toggle__fill"></div>
+      </label>
+    </div>
+
+    <div class="add-task-popup hidden">
+      <section class="popup-body">
+        <div class="task-name-container">
+          <p class="popup-item-title">Task</p>
+          <input class="task-title" type="text" />
+        </div>
+        <div class="task-name-container">
+          <p class="popup-item-title">Date</p>
+          <input class="task-date" type="date" />
+        </div>
+        <div class="task-name-container">
+          <p class="popup-item-title">Time</p>
+          <input class="task-time" type="time" />
+        </div>
+        <div class="task-name-container">
+          <p class="popup-item-title">Description</p>
+          <input class="task-description" type="text" />
+        </div>
+        <div class="task-priority-container">
+          <div class="popup-item-title">Priority</div>
+          <select class="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+      </section>
+      <section class="popup-btns">
+        <button class="popup-add-btn">Add</button>
+        <button class="popup-close-btn">Close</button>
+      </section>
+    </div>
+
+    <main class="main">
+      <section class="all-tasks task-container">
+        <section class="task-container-header">
+          <p>All tasks</p>
+          <section>
+            <button class="add-task-btn">Add</button>
+            <select class="sort-dropdown sort-tasks">
+              <option value="default">Default</option>
+              <option value="time">Time</option>
+              <option value="today">Today</option>
+              <option value="status">Status</option>
+              <option value="priority">Priority</option>
+            </select>
+          </section>
+        </section>
+        <section class="tasks"></section>
+      </section>
+      <section class="pending task-container">
+        <section class="task-container-header">
+          <p>Pending tasks</p>
+          <select class="sort-dropdown sort-pending">
+            <option value="default">Default</option>
+            <option value="time">Time</option>
+            <option value="today">Today</option>
+            <option value="priority">Priority</option>
+          </select>
+        </section>
+        <section class="pending-tasks"></section>
+      </section>
+      <section class="completed task-container">
+        <section class="task-container-header">
+          <p>Completed tasks</p>
+          <select class="sort-dropdown sort-complete">
+            <option value="default">Default</option>
+            <option value="time">Time</option>
+            <option value="today">Today</option>
+            <option value="priority">Priority</option>
+          </select>
+        </section>
+        <section class="completed-tasks"></section>
+      </section>
+    </main>
+  </body>
+</html>

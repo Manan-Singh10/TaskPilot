@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracking</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" defer src="scripts/tasks.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <section class="left-header">
+        <div class="hamburger">&#9776;</div>
+        <p class="app-name" id="logo"><a href="index.html">TaskPilot</a></p>
+      </section>
+    </header>
+
+    <div class="menu hidden">
+      <div class="hamburger">&#9776;</div>
+      <div class="navigation-icon"><a href="index.html">Home</a></div>
+      <div class="navigation-icon" href="tracking.html">
+        <a href="tracking.html">Tracking</a>
+      </div>
+      <div class="navigation-icon">
+        <label class="navigation-icon toggle" for="myToggle">
+          <input type="checkbox" class="toggle__input" id="myToggle" />
+          <div class="toggle__fill"></div>
+        </label>
+      </div>
+    </div>
+
+    <main class="chart-container">
+      <section class="chart-container-header">
+        <select class="time-selector">
+          <option value="today">Today</option>
+          <option value="week">Last 7 days</option>
+          <option value="months">Months</option>
+        </select>
+
+        <select class="month-selector hidden">
+          <option value="jan">Jan</option>
+          <option value="feb">Feb</option>
+          <option value="mar">Mar</option>
+          <option value="apr">Apr</option>
+          <option value="may">May</option>
+          <option value="jun">Jun</option>
+          <option value="jul">Jul</option>
+          <option value="aug">Aug</option>
+          <option value="sep">Sep</option>
+          <option value="oct">Oct</option>
+          <option value="nov">Nov</option>
+          <option value="dec">Dec</option>
+        </select>
+      </section>
+
+      <canvas class="chart hidden" id="chart"></canvas>
+    </main>
+  </body>
+</html>
